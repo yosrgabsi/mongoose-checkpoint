@@ -1,5 +1,5 @@
-const express = required ('express')
-const contactSchema = require ('./model/contact')
+const express = require ('express')
+const contactSchema = require ('../Model/contact')
 const ContactRoute = express.Router()
 
 
@@ -31,7 +31,7 @@ ContactRoute.post('/addcontact',async (req,res)=> {
         const newContact= new contactSchema(req.body)
          await newContact.save()
 
-        res.status(200).json({msg: 'successfully added', newContact})
+        res.status(200).json({msg:'successfully added', newContact})
 
     }catch(err){
         console.log(err)

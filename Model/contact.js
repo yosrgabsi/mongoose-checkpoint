@@ -1,13 +1,13 @@
-const mongoose = require ('mongoose ')
-const contactSchema = mongoose.Schema ({
-name : string,
-lastName: string,
-age: Number,
+const mongoose = require('mongoose')
+const contactSchema = mongoose.Schema({
+name : String,
+lastName: String,
+age:Number,
 email:{
-type:string,
-required:true
+type:String,
+required:true,
 },
-favoriteFoods: string
+favoriteFoods: String
 
 })
 
